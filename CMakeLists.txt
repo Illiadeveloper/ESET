@@ -7,4 +7,4 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
-add_executable(main main.cpp FileSearcher.cpp)
+add_executable(file_searcher main.cpp FileSearcher.cpp)

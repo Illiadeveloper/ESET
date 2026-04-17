@@ -8,7 +8,6 @@
 
 namespace fs = std::filesystem;
 constexpr size_t BUFFER_SIZE = 4096;
-constexpr size_t NUMBER_OF_THREADS = 4;
 constexpr size_t CONTEXT_SIZE = 3;
 
 class FileSearcher {

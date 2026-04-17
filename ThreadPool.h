@@ -21,7 +21,10 @@ class ThreadPool {
   std::condition_variable condition;
 
  public:
-  ThreadPool(size_t numberOfThreads) : stop(false) {
+  ThreadPool(size_t numberOfThreads = std::thread::hardware_concurrency())
+      : stop(false) {
+    if (numberOfThreads == 0) numberOfThreads = 4;
+
     for (size_t i = 0; i < numberOfThreads; ++i) {
       workers.emplace_back([this] {
         while (true) {

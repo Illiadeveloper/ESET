@@ -11,7 +11,7 @@
 #include <system_error>
 
 FileSearcher::FileSearcher(std::string pattern)
-    : pattern(pattern), pool(NUMBER_OF_THREADS) {}
+    : pattern(pattern), pool() {}
 
 void FileSearcher::search(const fs::path& path) {
   std::error_code ec;
